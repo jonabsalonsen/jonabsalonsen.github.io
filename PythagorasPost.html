@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Visual Proof of Pythagorean Theorem</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/CRLogo.svg" alt="" /></span><span class="title">Coding Reveries</span>
+								</a>
+
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+
+				<!-- Main -->
+					<div id="main">
+						
+					
+					
+						<div class="inner">
+							<h1>Interactive Visual Proof of the Pythagorean Theorem</h1>
+							<iframe src="PythagorasBuild/index.html" 
+								style="border:0px #000000 none; display: block; margin: 0;" 
+								name="Game name" scrolling="no" 
+								frameborder="1" 
+								marginheight="0px" 
+								marginwidth="0px"
+								width="800"
+								height="600"
+								>
+							</iframe>
+							<p>
+								As you probably learnt in school, the Pythagorean theorem states that given a right-angled triangle, 
+								the hypothenuse squared is equal to the sum of the two other sides squared. In other words, a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup>.
+							</p>
+							<p>
+								There are a variety of ways of proving this theorem, one of which is demonstrated in the app above. The app probably requires some further explanation, so here goes:
+							</p>
+							<p>
+								The crucial idea one needs to keep in mind is that the area of a parallelogram with height h perpendicular to one of its sides b, is equal to
+								a rectangle with sides h and b, as demonstrated in the image below:
+							</p>
+							<img src="images/ParallelogramArea.png" alt="Image showing the area of a parallelogram" width="400" style="display: block; margin: 0 auto;"/>
+							<p>
+								In the app above, each of the two smaller squares is turned into a parallelogram by moving one of its sides. The area of this parallelogram is equal to the
+								original square, since the distance between the two parallel sides remains the same.
+							</p>
+							<p>
+								Next, each of the newly created parallelograms is turned into a rectangle. The area of this new rectangle is likewise equal to that of the parallogram, by virtue
+								of the same principle shown in the picture.
+							</p>
+							<p>
+								When both transformations have been made, it is evident that the combination of the two new rectangles has the same size as the
+								large square, formed by the hypothenuse.
+							</p>
+							
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="https://github.com/jonabsalonsen" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="https://www.linkedin.com/in/jon-absalonsen/" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

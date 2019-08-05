@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Fractal Landscape Generation</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/CRLogo.svg" alt="" /></span><span class="title">Coding Reveries</span>
+								</a>
+
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+
+				<!-- Main -->
+					<div id="main">
+						
+					
+					
+						<div class="inner">
+							<h1>Fractal Landscape Generation</h1>
+
+							<img src="images/landscapeDetail5.png" width="80%" style="margin: 25pt auto;" />
+
+							<p>
+							I wrote a script in Python a while back that I used in Blender to generate a random 3D landscape. 
+							Recently, I decided to rewrite the script in C# for use in the Unity Engine. The result is shown in the image above.</p>
+							<p>
+							The technique is based on a well-known idea called a "fractal landscape" 
+							(Read more about it in <a href="https://en.wikipedia.org/wiki/Fractal_landscape"> this Wikipedia article).</a>
+							A fractal is a pattern that has some property that is maintained no matter how far you zoom in. 
+							In the case of the landscape fractal, the property maintained is the degree of the relative roughness of the surface.
+							</p>
+							<p>
+							The algorithm that generated the landscape shown above is based on a simple idea: 
+							(1) start out with a large triangle, (2) find the mid-points of each side of the triangle, and (3) offset each midpoint slightly up or down.
+							Next, (4) divide the large triangle into 4 smaller triangles, by connecting the midpoints of each side of the large triangle.
+							Repeat steps (2)-(4) as desired with the new triangles, and you get something like the landscape shown above.
+							The process looks something like this:
+							</p>
+							<img src="images/landscape.gif" width="80%" style="margin: 0 auto"/>
+							<p>(In the .gif above, I've used 3 triangles to compose a square)</p>
+							<p>
+							In order to generate an "organic" looking landscape, it is crucial that the offset of the midpoints is random each time. 
+							Otherwise, the fractal will be "mathematical" looking like the Mandelbrot set.
+							</p>
+							<p>You can find the GitHub repository for the C# script that generated this landscape <a href="https://github.com/jonabsalonsen/FractalLandscapeGenerator">here</a>.</p>
+						</div>
+					</div>
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="https://github.com/jonabsalonsen" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="https://www.linkedin.com/in/jon-absalonsen/" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

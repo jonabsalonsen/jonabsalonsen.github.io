@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Meshmerize - 3D scanning webapp</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/CRLogo.svg" alt="" /></span><span class="title">Coding Reveries</span>
+								</a>
+
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+
+				<!-- Main -->
+					<div id="main">
+						
+					
+					
+						<div class="inner">
+							<h1>Meshmerize - a webapp for 3D scanning</h1>
+							<img src="images/MeshDemo.png" alt="" />
+							<p>
+								From Autumn 2019 until Spring 2020 I was employed by the online design gallery Adorno ApS in order to work on the
+								webapp <a href="">Meshmerize</a>, which was funded by Innovation Fund Denmark. The goal of the app was to automate, 
+								as much as possible, the process of creating AR-ready 3D scans of real-world objects.
+							</p>
+							<p>
+								There is plenty of open source software that can create a 3D point cloud from a set of images, such as Colmap, MVE etc. However,
+								the point cloud generated is far from AR-ready, since it is not oriented and scaled properly, as well as a host of other issues, such as
+								containing too much irrelevant information and noise. Before meshing and texturing the point cloud, these problems ideally need to be solved. 
+							</p>
+							<p>
+								In the process of developing Meshmerize, I managed to automate the following:
+								<ul>
+									<li>Rotation of the 3D model, so that it is aligned with z-axis.</li>
+									<li>Translation of the 3D model, so that it is placed at the center of the xy-plane.</li>
+									<li>Scaling to the correct real-world size of the object.</li>
+									<li>A range of techniques for removing unwanted geometry and noise.</li>
+									<li>Downsampling.</li>
+									<li>Meshing</li>
+									<li>Texturing using MVSTexturing. This step included combining all the textures into one downsampled texture file.</li>
+								</ul>
+							</p>
+							<p>
+								I used MVE for generating the point cloud, Open3D for Poisson meshing and MVSTexturing for texturing. Other than that,
+								a lot of work was put into developing algorithms for preprocessing the point cloud before meshing it. This processing was written in
+								Python using mainly the NumPy library, in order to accelerate numerical linear algebra calculations.
+							</p>
+							<p>
+								I will probably detail the algorithms I developed in a later post. Check out <a href="https://meshmerize.io/cases/">some examples of 3D
+								models generated using Meshmerize</a>. 
+							</p>
+
+							
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="https://github.com/jonabsalonsen" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="https://www.linkedin.com/in/jon-absalonsen/" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Meshmerize - 3D scanning webapp</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/CRLogo.svg" alt="" /></span><span class="title">Coding Reveries</span>
+								</a>
+
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Pipe Assembly - An open source puzzle game</h1>
+							<p>
+								Use the W, A, S, and D keys to move around, and the &lt;LEFT&gt; and &lt;RIGHT&gt; arrow keys to rotate 
+								counter clockwise and clockwise, respectively. The game is still a work in progress, so a win state
+								has not been implemented. The project is open source, and you can check out the code on <a href="https://github.com/jonabsalonsen/pipe-assembly-game">github.com</a>
+							</p>
+							<canvas id="canvas" oncontextmenu="event.preventDefault()"></canvas>
+
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="https://github.com/jonabsalonsen" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="https://www.linkedin.com/in/jon-absalonsen/" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script type='text/javascript'>
+				var Module = {
+					canvas: (function() { return document.getElementById('canvas'); })()
+				};
+			</script>
+			<script src="PipeAssemblyGameBuild/index.js"></script>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
